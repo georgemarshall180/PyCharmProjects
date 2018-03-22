@@ -9,17 +9,35 @@ PATH=\
 :/bin/\
 :$HOME/bin/\
 :$HOME/bin/lib/\
+:$HOME/bin/lib/\
 :$HOME/.local/bin/\
-:./\;
+:$HOME/python/\
+:$HOME/anaconda3/bin\
+;
 export PATH
 
 #python path
-#:$HOME/python/\
+# PYTHON PATH for MAC version of Python
+#PYTHONPATH=\
+#:$HOME/Library/\
+#:$HOME/Library/lib/\
+#:$HOME/Library/bin/\
+##:$HOME/python/\
+#:./\;
+
+#Anaconda python path
 PYTHONPATH=\
-:./\;
+:./\
+:$HOME/anaconda3/\
+:$HOME/anaconda3/lib/\
+:$HOME/anaconda3/lib/python3.6/site-packages/\
+:$HOME/anaconda3/bin/\
+:../;
 export PYTHONPATH
+PATH=$PATH:$PYTHONPATH
 
 ##PROMPT
+
 export PS1="\u:"
 export PS2="\u@\h:"
 #export PS#="$PWD"
@@ -40,17 +58,11 @@ export EDITOR=/usr/bin/vi
 alias h='history'
 alias x='exit'
 alias la='ls -a'
-alias ll='ls -al'
+alias ll='ls -l'
 alias cp='cp -iv'
-alias mv='mv -iv'
 alias cl='clear'
-alias sa='source activate gl-env'
+alias mv='mv -iv'
+alias python='$HOME/anaconda3/bin/python3'
 
 export JAVA_HOME=$(/usr/libexec/java_home)
 
-
-# added by Anaconda2 2.5.0 installer
-export PATH="/Users/marshall/anaconda/bin:$PATH"
-
-# added by Anaconda3 5.0.1 installer
-export PATH="/Users/marshall/anaconda3/bin:$PATH"
